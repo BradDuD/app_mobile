@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#1c1c1c"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="26dp"> <!-- Padding interior -->
+
+            <!-- Título del post -->
+            <TextView
+                android:id="@+id/postTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/postCategory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Categoría del post -->
+            <TextView
+                android:id="@+id/postCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="18dp" />
+
+            <!-- Usuario del post -->
+            <TextView
+                android:id="@+id/postUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D3D3D3"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="18dp"
+                app:layout_constraintTop_toBottomOf="@id/postCategory"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Contenido del post -->
+            <TextView
+                android:id="@+id/postContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#D3D3D3"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/postTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="18dp" />
+
+            <!-- Sección de íconos: Comentarios y Likes -->
+            <LinearLayout
+                android:id="@+id/actionIconsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/postContent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal">
+
+                <!-- Icono de comentario -->
+                <ImageView
+                    android:id="@+id/commentIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_comment_foreground"
+                android:contentDescription="Comentar"
+                app:tint="#FFFFFF" />
+
+                <!-- Icono de Like -->
+                <ImageView
+                    android:id="@+id/likeIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_like_foreground"
+                android:contentDescription="Dar like"
+                app:tint="#FFFFFF" />
+
+                <!-- Contador de likes -->
+                <TextView
+                    android:id="@+id/likeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="8dp"
+                android:textSize="14sp"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#000000">
+
+    <!-- Barra de categorías -->
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:entries="@array/categories"
+        android:spinnerMode="dropdown" />
+
+    <!-- Campo para el título del blog -->
+    <EditText
+        android:id="@+id/blog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título del post"
+        android:inputType="text"
+        android:background="@drawable/rounded_button"
+        android:layout_below="@id/spinner_category"
+        android:layout_marginTop="16dp" />
+
+    <!-- Área para el contenido del blog -->
+    <EditText
+        android:id="@+id/blog_content"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:hint="Escribe tu contenido aquí"
+        android:inputType="textMultiLine"
+        android:minLines="6"
+        android:maxLines="10"
+        android:gravity="top"
+        android:background="@drawable/rounded_button"
+        android:layout_below="@id/blog_title"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón de publicar -->
+    <Button
+        android:id="@+id/go_to_publish_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blog_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/rounded_button"
+        android:foregroundTint="#FFC107"
+        android:text="Publicar"
+        android:textColor="#FFF" />
+
+</RelativeLayout>
+

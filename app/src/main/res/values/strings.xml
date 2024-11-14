@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">app_mobiles</string>
+
+    <string-array name="categories">
+        <item>Tecnología</item>
+        <item>Salud</item>
+        <item>Entretenimiento</item>
+        <item>Deportes</item>
+        <item>Educación</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
